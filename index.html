@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia da PUC</title>
+    <link rel="stylesheet" href="reset.css"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="secao-topo">
+        <h1>Academia da PUC</h1>
+    </section>
+
+    <section class="descricao-pag">
+        <h2>Controle de Alunos</h2>
+        <p>Nesta página você poderá consultar o estado atual dos planos dos alunos.</p>
+        <p>Clique em 'Listar Alunos' para abrir a seção de consulta</p>
+    </section>
+
+    <button class="botao-novo-aluno">Adicionar novo aluno</button>
+        <section class="secao-novo-aluno">
+            <p>Informar todos os dados!</p>
+            <form>
+                <label>Nome: <input type="text"></label>
+                <label>CPF: <input type="text"></label>
+                <label>Telefone: <input type="text"></label>
+                <input type="submit" value="Cadastrar!">
+            </form>
+        </section>
+
+
+    <button class="botao-mostra-lista">Listar alunos</button>
+        <section class="secao-tabela">
+        <div class="lista-alunos">
+        <div class="campo-pesquisa">
+            <p>Pesquise por nome, matrícula ou CPF:</p>
+            <input type="text" data-filtro>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Aluno</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Validade do plano</th>
+                </tr>
+            </thead>
+            <tbody>
+                AO LADO DE CADA LINHA, MOSTRAR OS BOTÕES DE EDITAR DADOS E ADICIONAR PLANO
+                <tr>
+                    {% for aluno in alunos %}
+                    <td>{{aluno.matricula}}</td>
+                    <td>{{aluno.nome}}</td>
+                    <td>{{aluno.cpf}}</td>
+                    <td>{{aluno.telefone}}</td>
+                    <td>{{aluno.validade}}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </div>
+        </table>
+    </section>
+
+</body>
+<footer>
+    <p><i>Desenvolvido por Jhonatta Tavares</i></p>
+</footer>
+<script src="main.js"></script>
+</html>
