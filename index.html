@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia da PUC</title>
-    <link rel="stylesheet" href="reset.css"> 
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section class="secao-topo">
         <h1>Academia da PUC</h1>
@@ -19,46 +22,40 @@
     </section>
 
     <button class="botao-novo-aluno">Adicionar novo aluno</button>
-        <section class="secao-novo-aluno">
-            <p>Informar todos os dados!</p>
-            <form>
-                <label>Nome: <input type="text"></label>
-                <label>CPF: <input type="text"></label>
-                <label>Telefone: <input type="text"></label>
-                <input type="submit" value="Cadastrar!">
-            </form>
-        </section>
+    <section class="secao-novo-aluno">
+        <p>Informar todos os dados!</p>
+        <form>
+            <label>Nome: <input type="text" name="nome"></label>
+            <label>CPF: <input type="text" name="cpf"></label>
+            <label>Telefone: <input type="text" name="telefone"></label>
+            <input type="submit" value="Cadastrar!">
+        </form>
+    </section>
 
 
     <button class="botao-mostra-lista">Listar alunos</button>
-        <section class="secao-tabela">
+    <section class="secao-tabela">
         <div class="lista-alunos">
-        <div class="campo-pesquisa">
-            <p>Pesquise por nome, matrícula ou CPF:</p>
-            <input type="text" data-filtro>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Matrícula</th>
-                    <th>Aluno</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
-                    <th>Validade do plano</th>
-                </tr>
-            </thead>
-            <tbody>
-                AO LADO DE CADA LINHA, MOSTRAR OS BOTÕES DE EDITAR DADOS E ADICIONAR PLANO
-                <tr>
-                    {% for aluno in alunos %}
-                    <td>{{aluno.matricula}}</td>
-                    <td>{{aluno.nome}}</td>
-                    <td>{{aluno.cpf}}</td>
-                    <td>{{aluno.telefone}}</td>
-                    <td>{{aluno.validade}}</td>
-                    {% endfor %}
-                </tr>
-            </tbody>
+            <div class="campo-pesquisa">
+                <p>Pesquise um aluno específico pelo seu CPF:</p>
+                <label><input type="text" data-filtro><button class="bt-filtrar">Filtrar</button></label>
+            </div>
+            <table class="tabela-alunos table-striped">
+                <thead>
+                    <tr class="itens-tabela-alunos">
+                        <th scope="col">Matrícula</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Aluno</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Validade do plano</th>
+                        <th scope="col">&#9998</th>
+                        <th scope="col">+</th>
+                        <th scope="col">X</th>
+                    </tr>
+                </thead>
+                <tbody class="corpo-tabela-alunos">
+                    <!-- AQUI OS ITENS SERÃO INSERIDOS VIA REQUISICAO JS COM AS TAGS <tr> e <td> -->
+                </tbody>
         </div>
         </table>
     </section>
@@ -68,4 +65,5 @@
     <p><i>Desenvolvido por Jhonatta Tavares</i></p>
 </footer>
 <script src="main.js"></script>
+
 </html>
