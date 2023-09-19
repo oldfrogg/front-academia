@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat&family=Roboto+Mono:wght@700&family=Ysabeau:ital,wght@0,300;0,500;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@500&display=swap');
+
+
 body {
     /**background-color: antiquewhite;**/
-    background-color: black;
-    color: antiquewhite;
+    /**background-color: black;*/
+    / color: antiquewhite;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section {
@@ -19,7 +24,7 @@ section {
 
 h1 {
     font-size: 4rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     text-align: center;
 }
 
@@ -32,7 +37,9 @@ p {
     margin: 1rem;
 }
 
-.botao-mostra-lista, .botao-novo-aluno {
+.botao-mostra-lista,
+.botao-novo-aluno,
+.bt_atualiza-lista {
     background-color: aquamarine;
     border-radius: 10px;
     width: 10rem;
@@ -41,11 +48,15 @@ p {
     margin-top: 2rem;
 }
 
-.botao-mostra-lista:hover, .botao-novo-aluno:hover {
+.botao-mostra-lista:hover,
+.botao-novo-aluno:hover,
+.bt_atualiza-lista:hover {
     background-color: aqua;
 }
 
-.botao-mostra-lista:active, .botao-novo-aluno:active {
+.botao-mostra-lista:active,
+.botao-novo-aluno:active,
+.bt_atualiza-lista:active {
     background-color: rgb(3, 179, 179);
 }
 
@@ -97,7 +108,9 @@ td {
     text-align: center;
 }
 
-.edita, .contrata, .exclui {
+.edita,
+.contrata,
+.exclui {
     padding: 0;
     background: transparent;
     border-style: outset;
@@ -105,11 +118,14 @@ td {
     height: 2rem;
 }
 
-.edita:hover, .contrata:hover, .exclui:hover {
+.edita:hover,
+.contrata:hover,
+.exclui:hover {
     background-color: #CCCCCC;
 }
 
-.edita:active, .contrata:active .exclui:active {
+.edita:active,
+.contrata:active .exclui:active {
     background-color: #AAAAAA;
 }
 
@@ -121,12 +137,26 @@ footer p {
     text-align: center;
 }
 
+.apresentacao-pessoal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+a {
+    font-family: 'Ysabeau', sans-serif;
+    text-decoration: underline wavy;
+    color: #CCCCCC
+}
+
 
 
 .oculta {
     display: none;
 }
 
-.mostra{
+.mostra {
     display: flex;
 }

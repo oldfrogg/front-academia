@@ -24,10 +24,10 @@
     <button class="botao-novo-aluno">Adicionar novo aluno</button>
     <section class="secao-novo-aluno">
         <p>Informar todos os dados!</p>
-        <form>
-            <label>Nome: <input type="text" name="nome"></label>
-            <label>CPF: <input type="text" name="cpf"></label>
-            <label>Telefone: <input type="text" name="telefone"></label>
+        <form id="form-novo-aluno">
+            <label>Nome: <input type="text" name="nome" id="inNome"></label>
+            <label>CPF: <input type="number" name="cpf" id="inCPF"></label>
+            <label>Telefone: <input type="text" name="telefone" id="inTelefone"></label>
             <input type="submit" value="Cadastrar!">
         </form>
     </section>
@@ -36,9 +36,10 @@
     <button class="botao-mostra-lista">Listar alunos</button>
     <section class="secao-tabela">
         <div class="lista-alunos">
+            <button class="bt_atualiza-lista" onclick="getList()">Atualizar lista</button>
             <div class="campo-pesquisa">
                 <p>Pesquise um aluno específico pelo seu CPF:</p>
-                <label><input type="text" data-filtro><button class="bt-filtrar">Filtrar</button></label>
+                <input type="text" id="inFiltro" data-filtro><button class="bt-filtrar">Filtrar</button>
             </div>
             <table class="tabela-alunos table-striped">
                 <thead>
@@ -56,13 +57,16 @@
                 <tbody class="corpo-tabela-alunos">
                     <!-- AQUI OS ITENS SERÃO INSERIDOS VIA REQUISICAO JS COM AS TAGS <tr> e <td> -->
                 </tbody>
+            </table>
         </div>
-        </table>
     </section>
-
 </body>
 <footer>
+    <div class="apresentacao-pessoal">
     <p><i>Desenvolvido por Jhonatta Tavares</i></p>
+    <a href="https://github.com/oldfrogg">GitHub</a>
+    <a href="https://www.linkedin.com/in/jhonatta-tavares-204905202/">LinkedIn</a>
+    </div>
 </footer>
 <script src="main.js"></script>
 
