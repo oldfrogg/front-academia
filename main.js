@@ -102,7 +102,6 @@ function filtraAlunos() {
             getList()
             return; //caso o campo esteja vazio, mostra a lista completa
         }
-        getList()
         getListFiltrada(cpf)
         inFiltro.value = ""
         inFiltro.focus()
@@ -117,7 +116,8 @@ function getListFiltrada(cpf) {
     fetch(url, { method: 'GET' })
         .then(resposta => resposta.json())
         .then((dados) => {
-            removeDiferentes(dados.matricula);
+            corpoTabelaAlunos.innerHTML=""; // Limpa a tabela
+            insertList(dados.matricula, dados.cpf, dados.nome, dados.tel, dados.validade);
         })
         .catch((error) => {
             console.error('Error:', error);
