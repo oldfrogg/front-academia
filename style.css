@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat&family=Roboto+Mono:wght@700&family=Ysabeau:ital,wght@0,300;0,500;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@500&display=swap');
+
+
 body {
     background-color: antiquewhite;
+    color: darkslategrey;
+    /*background-color: black;*/
+    /*color: antiquewhite;*/
+    font-family: 'Montserrat', sans-serif;
 }
 
 section {
@@ -11,14 +19,15 @@ section {
 
 .secao-topo {
     flex-direction: column;
-    background-color: grey;
+    background-color: darkslategray;
     height: 10vh;
 }
 
 h1 {
     font-size: 4rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     text-align: center;
+    color: black;
 }
 
 h2 {
@@ -30,7 +39,9 @@ p {
     margin: 1rem;
 }
 
-button {
+.botao-mostra-lista,
+.botao-novo-aluno,
+.bt_atualiza-lista {
     background-color: aquamarine;
     border-radius: 10px;
     width: 10rem;
@@ -39,8 +50,16 @@ button {
     margin-top: 2rem;
 }
 
-button:hover {
+.botao-mostra-lista:hover,
+.botao-novo-aluno:hover,
+.bt_atualiza-lista:hover {
     background-color: aqua;
+}
+
+.botao-mostra-lista:active,
+.botao-novo-aluno:active,
+.bt_atualiza-lista:active {
+    background-color: rgb(3, 179, 179);
 }
 
 .secao-novo-aluno {
@@ -61,19 +80,40 @@ form {
     display: none;
     margin: 3rem 25%;
     flex-direction: column;
-    border: solid 1px;
-    border-radius: 10px;
 }
 
 .campo-pesquisa {
     padding: 2rem 0;
     display: flex;
     flex-direction: row;
-    gap: 2rem
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
+
+.bt-cadastrar,
+.bt-filtrar {
+    background-color: aquamarine;
+    border-radius: 10px;
+    width: 6rem;
+    display: block;
+    margin: 5px;
+}
+
+.bt-cadastrar:hover,
+.bt-filtrar:hover {
+    background-color: aqua;
+}
+
+.bt-cadastrar:active,
+.bt-filtrar:active {
+    background-color: rgb(3, 179, 179);
+}
+
 
 table {
     display: block ruby;
+    margin-bottom: 50px;
 }
 
 th {
@@ -84,14 +124,55 @@ th {
 
 td {
     padding: 0.1rem 1.5rem;
+    text-align: center;
+
+}
+
+.edita,
+.contrata,
+.exclui {
+    padding: 0;
+    background: transparent;
+    border-style: outset;
+    width: 2rem;
+    height: 2rem;
+}
+
+.edita:hover,
+.contrata:hover,
+.exclui:hover {
+    background-color: #CCCCCC;
+}
+
+.edita:active,
+.contrata:active .exclui:active {
+    background-color: #AAAAAA;
 }
 
 footer {
+    background-color: #AAAAAA;
+    width: 100vw;
+    margin-top: 20vh;
     padding: 10vh;
+    position: relative;
 }
 
 footer p {
     text-align: center;
+}
+
+.apresentacao-pessoal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+a {
+    font-family: 'Ysabeau', sans-serif;
+    text-decoration: underline wavy;
+    color: darkslategray
 }
 
 
@@ -100,6 +181,6 @@ footer p {
     display: none;
 }
 
-.mostra{
+.mostra {
     display: flex;
 }
