@@ -10,12 +10,12 @@ O Front tem como objetivo criar uma interface amigável para o controle de cadas
 
 
 ## Funções
-* Adicionar novos alunos.
-* Ver toda a lista de alunos.
-* Filtrar por cpf.
-* Modificar o cadastro dos alunos.
-* Adicionar um plano mensal.
-* Excluí-lo do cadastro.
+* Adicionar novos alunos
+* Ver toda a lista de alunos
+* Filtrar por cpf
+* Modificar o cadastro dos alunos
+* Adicionar um plano mensal
+* Excluí-lo do cadastro
 
 
 
