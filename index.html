@@ -11,9 +11,10 @@
 </head>
 
 <body>
-    <section class="secao-topo">
+
+    <header class="secao-topo">
         <h1>Academia da PUC</h1>
-    </section>
+    </header>
 
     <section class="descricao-pag">
         <h2>Controle de Alunos</h2>
@@ -23,10 +24,10 @@
 
     <button class="botao-novo-aluno">Adicionar novo aluno</button>
     <section class="secao-novo-aluno">
-        <p>Informar todos os dados!</p>
+        <p>Informar ao menos nome e CPF!</p>
         <form id="form-novo-aluno">
-            <label>Nome: <input type="text" name="nome" id="inNome" placeholder="Ex: Neil Peart"></label>
-            <label>CPF: <input type="number" name="cpf" id="inCPF" placeholder="Ex: 12345678900"></label>
+            <label>Nome: <input type="text" name="nome" id="inNome" placeholder="Ex: Neil Peart" required></label>
+            <label>CPF: <input type="number" name="cpf" id="inCPF" placeholder="Ex: 12345678900" required></label>
             <label>Telefone: <input type="text" name="telefone" id="inTelefone" placeholder="Ex: 79 999990000"></label>
             <input type="submit" value="Cadastrar!" class="bt-cadastrar">
         </form>

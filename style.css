@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat&family=Roboto+Mono:wght@700&family=Ysabeau:ital,wght@0,300;0,500;1,100;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@500&display=swap');
 
+:root{
+    --cor-principal: antiquewhite;
+    --cor-secundaria: darkslategrey;
+    --preto: black;
+    --cor-botao: aquamarine;
+    --hover-botao: aqua;
+    --active-botao: rgb(3, 179, 179);
+    --cinza-medio: #AAAAAA;
+    --cinza-claro: #CCCCCC;
+}
+
 
 body {
-    background-color: antiquewhite;
-    color: darkslategrey;
-    /*background-color: black;*/
-    /*color: antiquewhite;*/
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    /*background-color: black;
+    color: antiquewhite;*/
     font-family: 'Montserrat', sans-serif;
 }
+
 
 section {
     padding: 1rem 0 2rem 0;
@@ -19,15 +31,15 @@ section {
 
 .secao-topo {
     flex-direction: column;
-    background-color: darkslategray;
+    background-color: var(--cor-secundaria);
     height: 10vh;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 7vh;
     font-family: 'Roboto Slab', sans-serif;
     text-align: center;
-    color: black;
+    color: var(--preto);
 }
 
 h2 {
@@ -42,7 +54,7 @@ p {
 .botao-mostra-lista,
 .botao-novo-aluno,
 .bt_atualiza-lista {
-    background-color: aquamarine;
+    background-color: var(--cor-botao);
     border-radius: 10px;
     width: 10rem;
     display: block;
@@ -53,13 +65,13 @@ p {
 .botao-mostra-lista:hover,
 .botao-novo-aluno:hover,
 .bt_atualiza-lista:hover {
-    background-color: aqua;
+    background-color: var(--hover-botao);
 }
 
 .botao-mostra-lista:active,
 .botao-novo-aluno:active,
 .bt_atualiza-lista:active {
-    background-color: rgb(3, 179, 179);
+    background-color: var(--active-botao);
 }
 
 .secao-novo-aluno {
@@ -93,7 +105,7 @@ form {
 
 .bt-cadastrar,
 .bt-filtrar {
-    background-color: aquamarine;
+    background-color: var(--cor-botao);
     border-radius: 10px;
     width: 6rem;
     display: block;
@@ -102,12 +114,12 @@ form {
 
 .bt-cadastrar:hover,
 .bt-filtrar:hover {
-    background-color: aqua;
+    background-color: var(--hover-botao);
 }
 
 .bt-cadastrar:active,
 .bt-filtrar:active {
-    background-color: rgb(3, 179, 179);
+    background-color: var(--active-botao);
 }
 
 
@@ -141,19 +153,19 @@ td {
 .edita:hover,
 .contrata:hover,
 .exclui:hover {
-    background-color: #CCCCCC;
+    background-color: var(--cinza-claro)
 }
 
 .edita:active,
 .contrata:active .exclui:active {
-    background-color: #AAAAAA;
+    background-color: var(--cinza-medio);
 }
 
 footer {
-    background-color: #AAAAAA;
+    background-color: var(--cinza-medio);
     width: 100vw;
     margin-top: 20vh;
-    padding: 10vh;
+    padding: 10vh 0;
     position: relative;
 }
 
@@ -172,7 +184,7 @@ footer p {
 a {
     font-family: 'Ysabeau', sans-serif;
     text-decoration: underline wavy;
-    color: darkslategray
+    color: var(--cor-secundaria)
 }
 
 
